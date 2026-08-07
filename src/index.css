@@ -1,0 +1,218 @@
+@import "tailwindcss";
+
+/* BlackLine Creative - Design System */
+
+:root {
+  --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+
+  /* Brand Colors */
+  --bg-dark: #070709;
+  --bg-dark-card: #111116;
+  --bg-light: #FFFFFF;
+  --bg-light-subtle: #F8F9FA;
+  
+  --text-dark-primary: #FFFFFF;
+  --text-dark-secondary: #A1A1AA;
+  --text-light-primary: #09090B;
+  --text-light-secondary: #52525B;
+
+  /* Accent Colors */
+  --pink-accent: #FF007F;
+  --pink-glow: rgba(255, 0, 127, 0.4);
+  --yellow-accent: #FFE66D;
+  --orange-accent: #FF7B00;
+  --purple-accent: #9D4EDD;
+  --blue-accent: #00B4D8;
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(90deg, #FFE66D 0%, #FF7B00 25%, #FF007F 50%, #9D4EDD 75%, #00B4D8 100%);
+  --gradient-fluid: radial-gradient(circle at 70% 30%, rgba(255, 0, 127, 0.25) 0%, rgba(157, 78, 221, 0.2) 35%, rgba(0, 180, 216, 0.15) 70%, transparent 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-primary);
+  background-color: var(--bg-dark);
+  color: var(--text-dark-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Section Colors */
+.theme-dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark-primary);
+}
+
+.theme-light {
+  background-color: var(--bg-light);
+  color: var(--text-light-primary);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.accent-dot {
+  color: var(--pink-accent);
+  display: inline;
+}
+
+/* Brand Line */
+.gradient-bar {
+  height: 2px;
+  width: 100%;
+  background: var(--gradient-brand);
+  position: relative;
+}
+
+.gradient-dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--pink-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--pink-glow), 0 0 20px var(--pink-glow);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  border: 1px solid currentColor;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.btn-primary.dark-btn {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-primary.dark-btn:hover {
+  background: #FFFFFF;
+  color: #000000;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+.btn-primary.light-btn {
+  color: #000000;
+  border-color: #000000;
+}
+
+.btn-primary.light-btn:hover {
+  background: #000000;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-gradient {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  background: var(--gradient-brand);
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(255, 0, 127, 0.3);
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(255, 0, 127, 0.5);
+}
+
+/* Container */
+.container-custom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding: 0 48px;
+  }
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
