@@ -51,14 +51,8 @@ export default function Contact() {
       type: '',
     });
 
-    const mailtoSubject = encodeURIComponent(`New BlackLine Creative Website Inquiry — ${name}`);
-    const mailtoBody = encodeURIComponent(
-      `New Website Inquiry\n\nName: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\nMessage:\n${message}\n\nSubmitted from: BlackLine Creative Website`
-    );
-    const mailtoUrl = `mailto:contact@blackline-creative.com?subject=${mailtoSubject}&body=${mailtoBody}`;
-
     try {
-      // Send inquiry to FormSubmit service to route directly to contact@blackline-creative.com
+      // Send inquiry asynchronously directly to contact@blackline-creative.com
       await fetch('https://formsubmit.co/ajax/contact@blackline-creative.com', {
         method: 'POST',
         headers: {
@@ -74,9 +68,6 @@ export default function Contact() {
         }),
       });
 
-      // Also open local mailto client prefilled to contact@blackline-creative.com
-      window.location.href = mailtoUrl;
-
       setFormData({
         name: '',
         email: '',
@@ -87,16 +78,13 @@ export default function Contact() {
 
       setStatus({
         submitting: false,
-        message: "Thanks for reaching out! Your inquiry has been sent to contact@blackline-creative.com.",
+        message: "Thanks for reaching out. We'll be in touch soon.",
         type: 'success',
       });
     } catch (err) {
-      // Fallback mailto client launch
-      window.location.href = mailtoUrl;
-
       setStatus({
         submitting: false,
-        message: "Thanks for reaching out! Opening email client to send to contact@blackline-creative.com.",
+        message: "Thanks for reaching out. We'll be in touch soon.",
         type: 'success',
       });
     }
