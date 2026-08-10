@@ -5,6 +5,7 @@ import Strategy from './pages/Strategy';
 import Creativity from './pages/Creativity';
 import CaseStudy from './pages/CaseStudy';
 import Work from './pages/Work';
+import Contact from './pages/Contact';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/strategy" element={<Strategy />} />
         <Route path="/creativity" element={<Creativity />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/case-study" element={<CaseStudy />} />
         <Route path="/work/:id" element={<CaseStudy />} />
         <Route path="*" element={<Home />} />
