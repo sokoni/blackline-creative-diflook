@@ -1,0 +1,394 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #080808;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.blackline-home {
+  min-height: 100vh;
+  background: #fff;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 38px 6%;
+}
+
+.header-logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.nav a {
+  color: #080808;
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: opacity 0.2s ease;
+}
+
+.nav a:hover {
+  opacity: 0.55;
+}
+
+.nav .talk-button {
+  background: #050505;
+  color: #ffffff;
+
+  padding: 17px 25px;
+
+  border: 1px solid #050505;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.nav .talk-button:hover {
+  background: #ffffff;
+  color: #050505;
+  opacity: 1;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: auto;
+
+  padding:
+    40px
+    6%
+    65px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  max-width: 800px;
+
+  font-size: clamp(58px, 6vw, 94px);
+  line-height: 0.98;
+
+  font-weight: 800;
+  letter-spacing: -4px;
+}
+
+.pink-dot {
+  color: #f529c5;
+}
+
+
+/* =========================
+   GRADIENT LINE
+========================= */
+
+.brand-line {
+  position: relative;
+
+  width: 100%;
+  height: 5px;
+
+  margin: 60px 0 70px;
+
+  background: linear-gradient(
+    90deg,
+    #fff29b 0%,
+    #ffb94e 20%,
+    #ff6f91 38%,
+    #f229c3 55%,
+    #b967d9 73%,
+    #29b6f6 100%
+  );
+}
+
+.line-marker {
+  position: absolute;
+
+  left: 58%;
+  top: 50%;
+
+  width: 25px;
+  height: 25px;
+
+  background: #f229c3;
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   BRAND PILLARS
+========================= */
+
+.brand-pillars {
+  display: grid;
+
+  grid-template-columns:
+    minmax(250px, 1fr)
+    260px
+    minmax(250px, 1fr);
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.pillar h3 {
+  margin: 0 0 20px;
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.pillar-title {
+  margin: 0;
+
+  font-size: 27px;
+  line-height: 1.35;
+}
+
+.pillar-description {
+  margin: 27px 0 0;
+
+  font-size: 16px;
+  color: #333333;
+}
+
+.center-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-logo img {
+  display: block;
+
+  width: 180px;
+  max-width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================
+   BOTTOM BAND
+========================= */
+
+.brand-band {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 130px;
+
+  background:
+    repeating-radial-gradient(
+      ellipse at 10% 150%,
+      transparent 0,
+      transparent 12px,
+      rgba(255, 255, 255, 0.08) 13px,
+      transparent 14px
+    ),
+    #050505;
+
+  color: #ffffff;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: center;
+
+  padding: 0 7%;
+}
+
+.brand-band span,
+.brand-band strong {
+  position: relative;
+  z-index: 2;
+}
+
+.brand-band span {
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+.brand-band strong {
+  text-align: center;
+
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.brand-band span:last-child {
+  text-align: right;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .header {
+    padding: 28px 5%;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+
+  .hero {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .brand-pillars {
+    grid-template-columns: 1fr 180px 1fr;
+    gap: 35px;
+  }
+
+  .center-logo img {
+    width: 140px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 760px) {
+
+  .header {
+    align-items: flex-start;
+  }
+
+  .header-logo img {
+    width: 125px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+
+  .hero h1 {
+    font-size: clamp(45px, 13vw, 68px);
+
+    line-height: 1;
+
+    letter-spacing: -2.5px;
+  }
+
+  .brand-line {
+    margin:
+      45px
+      0
+      55px;
+  }
+
+  .line-marker {
+    width: 20px;
+    height: 20px;
+  }
+
+  .brand-pillars {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 50px;
+  }
+
+  .center-logo {
+    width: 100%;
+    order: 2;
+  }
+
+  .center-logo img {
+    width: 150px;
+  }
+
+  .strategy {
+    order: 1;
+  }
+
+  .creativity {
+    order: 3;
+  }
+
+  .pillar-title {
+    font-size: 24px;
+  }
+
+  .brand-band {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    padding: 40px 6%;
+  }
+
+  .brand-band span,
+  .brand-band strong,
+  .brand-band span:last-child {
+    text-align: center;
+  }
+
+  .brand-band span {
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
+
+}
