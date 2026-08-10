@@ -8,14 +8,15 @@ html {
 
 body {
   margin: 0;
-  background: #ffffff;
-  color: #080808;
+  background: #050505;
+  color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .blackline-home {
   min-height: 100vh;
-  background: #fff;
+  background: #050505;
+  color: #ffffff;
 }
 
 
@@ -163,6 +164,7 @@ body {
 
   font-weight: 800;
   letter-spacing: -4px;
+  color: #ffffff;
 }
 
 .pink-dot {
@@ -208,7 +210,7 @@ body {
 
   transform: translate(-50%, -50%);
 
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 
@@ -234,6 +236,7 @@ body {
 
   font-size: 17px;
   font-weight: 800;
+  color: #ffffff;
 }
 
 .pillar-title {
@@ -241,13 +244,14 @@ body {
 
   font-size: 27px;
   line-height: 1.35;
+  color: #ffffff;
 }
 
 .pillar-description {
   margin: 27px 0 0;
 
   font-size: 16px;
-  color: #333333;
+  color: #bcbcbc;
 }
 
 .center-logo {
