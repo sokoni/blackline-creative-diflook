@@ -142,6 +142,16 @@
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
+/* Hover bridge to prevent menu from closing when moving cursor */
+.blc-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  height: 15px;
+}
+
 .blc-navbar.variant-black .blc-dropdown-menu {
   background: #111115;
   border: 1px solid #2a2a30;
