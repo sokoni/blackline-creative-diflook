@@ -67,6 +67,62 @@ body {
   opacity: 1;
 }
 
+/* STRATEGY NAV DROPDOWN */
+.strategy-nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.strategy-nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.strategy-nav-dropdown-trigger::after {
+  content: "▾";
+  font-size: 10px;
+  margin-left: 2px;
+}
+
+.strategy-nav-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 170px;
+  background: #111115;
+  border: 1px solid #2a2a30;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  padding: 8px 0;
+  z-index: 100;
+  margin-top: 12px;
+  border-radius: 4px;
+}
+
+.strategy-nav-dropdown:hover .dropdown-menu,
+.strategy-nav-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.strategy-nav-dropdown .dropdown-menu a {
+  display: block;
+  padding: 10px 18px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.strategy-nav-dropdown .dropdown-menu a:hover {
+  background: #1c1c24;
+  color: #f229c3 !important;
+  opacity: 1 !important;
+}
+
 
 /* MAIN HERO */
 

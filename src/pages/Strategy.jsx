@@ -54,7 +54,14 @@ export default function Strategy() {
         </a>
 
         <nav className="strategy-nav">
-          <a href="/about">ABOUT</a>
+          <div className="strategy-nav-dropdown">
+            <a href="/strategy" className="strategy-nav-dropdown-trigger">
+              BLACKLINE THEORY
+            </a>
+            <div className="dropdown-menu">
+              <a href="/strategy">STRATEGY</a>
+            </div>
+          </div>
           <a href="/services">SERVICES</a>
           <a href="/work">WORK</a>
           <a href="/insights">INSIGHTS</a>
