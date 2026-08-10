@@ -51,30 +51,31 @@ export default function Contact() {
       type: '',
     });
 
+    const mailtoSubject = encodeURIComponent(`New BlackLine Creative Website Inquiry — ${name}`);
+    const mailtoBody = encodeURIComponent(
+      `New Website Inquiry\n\nName: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\nMessage:\n${message}\n\nSubmitted from: BlackLine Creative Website`
+    );
+    const mailtoUrl = `mailto:contact@blackline-creative.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+
     try {
-      // Attempt backend API call
-      const response = await fetch('/api/contact', {
+      // Send inquiry to FormSubmit service to route directly to contact@blackline-creative.com
+      await fetch('https://formsubmit.co/ajax/contact@blackline-creative.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
         body: JSON.stringify({
+          _subject: `New BlackLine Creative Website Inquiry — ${name}`,
           name: name.trim(),
           email: email.trim(),
-          company: company.trim(),
+          company: company.trim() || 'N/A',
           message: message.trim(),
-          recipient: 'contact@blackline-creative.com',
         }),
       });
 
-      if (!response.ok) {
-        // Fallback for static environments: open mailto link cleanly
-        const mailtoSubject = encodeURIComponent(`New BlackLine Creative Website Inquiry — ${name}`);
-        const mailtoBody = encodeURIComponent(
-          `New Website Inquiry\n\nName: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\nMessage:\n${message}\n\nSubmitted from: BlackLine Creative Website`
-        );
-        window.location.href = `mailto:contact@blackline-creative.com?subject=${mailtoSubject}&body=${mailtoBody}`;
-      }
+      // Also open local mailto client prefilled to contact@blackline-creative.com
+      window.location.href = mailtoUrl;
 
       setFormData({
         name: '',
@@ -86,20 +87,16 @@ export default function Contact() {
 
       setStatus({
         submitting: false,
-        message: "Thanks for reaching out. We'll be in touch soon.",
+        message: "Thanks for reaching out! Your inquiry has been sent to contact@blackline-creative.com.",
         type: 'success',
       });
     } catch (err) {
-      // Fallback email client launch on connection exception
-      const mailtoSubject = encodeURIComponent(`New BlackLine Creative Website Inquiry — ${name}`);
-      const mailtoBody = encodeURIComponent(
-        `New Website Inquiry\n\nName: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\nMessage:\n${message}\n\nSubmitted from: BlackLine Creative Website`
-      );
-      window.location.href = `mailto:contact@blackline-creative.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+      // Fallback mailto client launch
+      window.location.href = mailtoUrl;
 
       setStatus({
         submitting: false,
-        message: "Thanks for reaching out. We'll be in touch soon.",
+        message: "Thanks for reaching out! Opening email client to send to contact@blackline-creative.com.",
         type: 'success',
       });
     }
