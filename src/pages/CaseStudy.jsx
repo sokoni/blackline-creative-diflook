@@ -154,9 +154,9 @@ export default function CaseStudy() {
       {/* BACK */}
       <div className="case-back">
 
-        <Link to="/work">
+        <Link to="/projects">
           <span>←</span>
-          BACK TO ALL WORK
+          BACK TO ALL PROJECTS
         </Link>
 
       </div>

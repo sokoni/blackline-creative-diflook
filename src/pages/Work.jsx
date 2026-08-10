@@ -50,7 +50,7 @@ export default function Work() {
         <div className="work-copy">
 
           <span className="work-eyebrow">
-            OUR WORK
+            OUR PROJECTS
           </span>
 
           <h1>

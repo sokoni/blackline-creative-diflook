@@ -49,7 +49,7 @@ export default function Navbar({ variant }) {
           </div>
 
           <Link to="/services" className="blc-nav-link">SERVICES</Link>
-          <Link to="/work" className="blc-nav-link">WORK</Link>
+          <Link to="/projects" className="blc-nav-link">PROJECTS</Link>
           <Link to="/insights" className="blc-nav-link">INSIGHTS</Link>
           <Link to="/contact" className="blc-nav-link">CONTACT</Link>
 
@@ -88,7 +88,7 @@ export default function Navbar({ variant }) {
             <Link to="/strategy" className="blc-mobile-link" style={{ paddingLeft: '20px', fontSize: '18px', opacity: 0.8 }}>└ STRATEGY</Link>
             <Link to="/creativity" className="blc-mobile-link" style={{ paddingLeft: '20px', fontSize: '18px', opacity: 0.8 }}>└ CREATIVITY</Link>
             <Link to="/services" className="blc-mobile-link">SERVICES</Link>
-            <Link to="/work" className="blc-mobile-link">WORK</Link>
+            <Link to="/projects" className="blc-mobile-link">PROJECTS</Link>
             <Link to="/insights" className="blc-mobile-link">INSIGHTS</Link>
             <Link to="/contact" className="blc-mobile-link">CONTACT</Link>
           </div>
