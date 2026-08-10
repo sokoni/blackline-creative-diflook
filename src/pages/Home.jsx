@@ -72,7 +72,7 @@ export default function Home() {
 
           <div className="center-logo">
             <img
-              src="/images/blc-logo-b.png"
+              src="/images/Main Logo B (B_Rainbow).png"
               alt="BlackLine Creative B"
             />
           </div>
