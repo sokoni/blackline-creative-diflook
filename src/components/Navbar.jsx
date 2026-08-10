@@ -43,7 +43,7 @@ export default function Navbar({ theme = 'dark' }) {
         <BrandLogo theme={theme} />
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-12 lg:space-x-16">
           {navLinks.map((link) => (
             <NavLink
               key={link.name}
@@ -72,7 +72,7 @@ export default function Navbar({ theme = 'dark' }) {
         <div className="hidden md:block">
           <Link
             to="/contact"
-            className={`btn-primary ${isLight ? 'light-btn' : 'dark-btn'}`}
+            className={`btn-primary !bg-black !text-white !border-black hover:!bg-neutral-900 hover:!border-neutral-900 hover:!text-white shadow-md`}
           >
             LET'S TALK
           </Link>
@@ -115,7 +115,7 @@ export default function Navbar({ theme = 'dark' }) {
           <div className="pt-8">
             <Link
               to="/contact"
-              className="btn-gradient w-full text-center"
+              className="btn-primary !bg-black !text-white !border-black hover:!bg-neutral-900 w-full text-center py-3 shadow-md"
             >
               LET'S TALK
             </Link>
