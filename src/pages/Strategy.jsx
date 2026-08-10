@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./Strategy.css";
 
 const strategyItems = [
@@ -46,30 +47,30 @@ export default function Strategy() {
       {/* HEADER */}
       <header className="strategy-header">
 
-        <a href="/" className="strategy-logo">
+        <Link to="/" className="strategy-logo">
           <img
             src="/images/blc-logo-white.png"
             alt="BlackLine Creative"
           />
-        </a>
+        </Link>
 
         <nav className="strategy-nav">
           <div className="strategy-nav-dropdown">
-            <a href="/strategy" className="strategy-nav-dropdown-trigger">
+            <Link to="/strategy" className="strategy-nav-dropdown-trigger">
               BLACKLINE THEORY
-            </a>
+            </Link>
             <div className="dropdown-menu">
-              <a href="/strategy">STRATEGY</a>
+              <Link to="/strategy">STRATEGY</Link>
             </div>
           </div>
-          <a href="/services">SERVICES</a>
-          <a href="/work">WORK</a>
-          <a href="/insights">INSIGHTS</a>
-          <a href="/contact">CONTACT</a>
+          <Link to="/services">SERVICES</Link>
+          <Link to="/work">WORK</Link>
+          <Link to="/insights">INSIGHTS</Link>
+          <Link to="/contact">CONTACT</Link>
 
-          <a href="/contact" className="strategy-talk">
+          <Link to="/contact" className="strategy-talk">
             LET'S TALK
-          </a>
+          </Link>
         </nav>
 
       </header>

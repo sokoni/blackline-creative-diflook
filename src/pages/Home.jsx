@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./Home.css";
 
 export default function Home() {
@@ -7,30 +8,30 @@ export default function Home() {
 
       {/* HEADER */}
       <header className="header">
-        <a href="/" className="header-logo">
+        <Link to="/" className="header-logo">
           <img
             src="/images/blc-logo-long.png"
             alt="BlackLine Creative"
           />
-        </a>
+        </Link>
 
         <nav className="nav">
           <div className="nav-dropdown">
-            <a href="/strategy" className="nav-dropdown-trigger">
+            <Link to="/strategy" className="nav-dropdown-trigger">
               BLACKLINE THEORY
-            </a>
+            </Link>
             <div className="dropdown-menu">
-              <a href="/strategy">STRATEGY</a>
+              <Link to="/strategy">STRATEGY</Link>
             </div>
           </div>
-          <a href="/services">SERVICES</a>
-          <a href="/work">WORK</a>
-          <a href="/insights">INSIGHTS</a>
-          <a href="/contact">CONTACT</a>
+          <Link to="/services">SERVICES</Link>
+          <Link to="/work">WORK</Link>
+          <Link to="/insights">INSIGHTS</Link>
+          <Link to="/contact">CONTACT</Link>
 
-          <a href="/contact" className="talk-button">
+          <Link to="/contact" className="talk-button">
             LET'S TALK
-          </a>
+          </Link>
         </nav>
       </header>
 
