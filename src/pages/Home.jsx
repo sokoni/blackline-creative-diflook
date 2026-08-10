@@ -10,7 +10,7 @@ export default function Home() {
       <header className="header">
         <Link to="/" className="header-logo">
           <img
-            src="/images/blc-logo-long.png"
+            src="/images/Main Logo Full (B_Rainbow).png"
             alt="BlackLine Creative"
           />
         </Link>
