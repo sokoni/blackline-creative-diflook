@@ -49,7 +49,18 @@ export default function Navbar({ variant }) {
           </div>
 
           <Link to="/services" className="blc-nav-link">SERVICES</Link>
-          <Link to="/projects" className="blc-nav-link">PROJECTS</Link>
+
+          {/* PROJECTS Dropdown */}
+          <div className="blc-nav-dropdown">
+            <Link to="/projects" className="blc-nav-link blc-dropdown-trigger">
+              PROJECTS
+            </Link>
+            <div className="blc-dropdown-menu">
+              <Link to="/projects">ALL PROJECTS</Link>
+              <Link to="/case-study">CASE STUDY</Link>
+            </div>
+          </div>
+
           <Link to="/insights" className="blc-nav-link">INSIGHTS</Link>
           <Link to="/contact" className="blc-nav-link">CONTACT</Link>
 
@@ -89,6 +100,7 @@ export default function Navbar({ variant }) {
             <Link to="/creativity" className="blc-mobile-link" style={{ paddingLeft: '20px', fontSize: '18px', opacity: 0.8 }}>└ CREATIVITY</Link>
             <Link to="/services" className="blc-mobile-link">SERVICES</Link>
             <Link to="/projects" className="blc-mobile-link">PROJECTS</Link>
+            <Link to="/case-study" className="blc-mobile-link" style={{ paddingLeft: '20px', fontSize: '18px', opacity: 0.8 }}>└ CASE STUDY</Link>
             <Link to="/insights" className="blc-mobile-link">INSIGHTS</Link>
             <Link to="/contact" className="blc-mobile-link">CONTACT</Link>
           </div>
