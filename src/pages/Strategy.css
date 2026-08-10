@@ -173,23 +173,10 @@ body {
   color: #f22bbd;
 }
 
-.strategy-line-container {
-  margin: 25px 0 15px;
-  width: 100%;
-  max-width: 440px;
-}
-
-.strategy-line-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
 .strategy-copy > p {
   max-width: 440px;
 
-  margin: 20px 0 0;
+  margin: 38px 0 0;
 
   color: #c4c4c4;
 

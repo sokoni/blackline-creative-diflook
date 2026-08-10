@@ -92,14 +92,6 @@ export default function Strategy() {
             that get found<span>.</span>
           </h1>
 
-          <div className="strategy-line-container">
-            <img 
-              src="/images/gradient-line.png" 
-              alt="BlackLine Gradient Line" 
-              className="strategy-line-img" 
-            />
-          </div>
-
           <p>
             We combine data, search insight, and strategic
             thinking to put your brand in front of the right
