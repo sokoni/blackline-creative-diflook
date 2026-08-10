@@ -39,7 +39,7 @@ export default function Navbar({ variant }) {
         <nav className="blc-nav">
           {/* BLACKLINE THEORY Dropdown */}
           <div className="blc-nav-dropdown">
-            <Link to="/strategy" className="blc-nav-link blc-nav-pill blc-dropdown-trigger">
+            <Link to="/strategy" className="blc-nav-link blc-dropdown-trigger">
               BLACKLINE THEORY
             </Link>
             <div className="blc-dropdown-menu">
@@ -49,9 +49,9 @@ export default function Navbar({ variant }) {
           </div>
 
           <Link to="/services" className="blc-nav-link">SERVICES</Link>
-          <Link to="/work" className="blc-nav-link blc-nav-pill">WORK</Link>
+          <Link to="/work" className="blc-nav-link">WORK</Link>
           <Link to="/insights" className="blc-nav-link">INSIGHTS</Link>
-          <Link to="/contact" className="blc-nav-link blc-nav-pill">CONTACT</Link>
+          <Link to="/contact" className="blc-nav-link">CONTACT</Link>
 
           {/* LET'S TALK Button */}
           <Link to="/contact" className="blc-talk-button">
