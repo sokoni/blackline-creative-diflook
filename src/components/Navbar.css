@@ -46,7 +46,7 @@
 }
 
 /* =========================
-   BLACK NAVBAR VARIANT
+   BLACK NAVBAR VARIANT (Dark Pages)
 ========================= */
 
 .blc-navbar.variant-black {
@@ -59,25 +59,43 @@
   color: #ffffff;
 }
 
-.blc-navbar.variant-black .blc-talk-button {
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  padding: 15px 24px;
-  font-size: 12px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.25s ease, color 0.25s ease;
+/* White background with black lettering on Black Navbar */
+.blc-navbar.variant-black .blc-nav-pill {
+  background-color: #ffffff;
+  color: #000000 !important;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: all 0.25s ease;
 }
 
-.blc-navbar.variant-black .blc-talk-button:hover {
-  background: #ffffff;
-  color: #000000;
+.blc-navbar.variant-black .blc-nav-pill:hover {
+  background-color: #e0e0e0;
+  color: #f12bbd !important;
   opacity: 1;
 }
 
+.blc-navbar.variant-black .blc-talk-button {
+  background: #ffffff;
+  color: #000000 !important;
+  border: 1px solid #ffffff;
+  padding: 12px 22px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.blc-navbar.variant-black .blc-talk-button:hover {
+  background: #e0e0e0;
+  color: #f12bbd !important;
+  opacity: 1;
+}
+
+
 /* =========================
-   WHITE NAVBAR VARIANT
+   WHITE NAVBAR VARIANT (Light Pages)
 ========================= */
 
 .blc-navbar.variant-white {
@@ -90,20 +108,37 @@
   color: #080808;
 }
 
+/* Black background with white lettering on White Navbar */
+.blc-navbar.variant-white .blc-nav-pill {
+  background-color: #000000;
+  color: #ffffff !important;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.blc-navbar.variant-white .blc-nav-pill:hover {
+  background-color: #1a1a1a;
+  color: #f12bbd !important;
+  opacity: 1;
+}
+
 .blc-navbar.variant-white .blc-talk-button {
-  background: #050505;
-  color: #ffffff;
-  border: 1px solid #050505;
-  padding: 15px 24px;
+  background: #000000;
+  color: #ffffff !important;
+  border: 1px solid #000000;
+  padding: 12px 22px;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
+  border-radius: 4px;
   text-decoration: none;
-  transition: background 0.25s ease, color 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .blc-navbar.variant-white .blc-talk-button:hover {
-  background: #ffffff;
-  color: #050505;
+  background: #1a1a1a;
+  color: #f12bbd !important;
   opacity: 1;
 }
 
