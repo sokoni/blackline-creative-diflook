@@ -10,10 +10,10 @@ export default function Home() {
       <Navbar theme="light" />
 
       {/* Main Content Area */}
-      <main className="pt-32 md:pt-44 pb-12">
+      <main className="pt-44 sm:pt-52 md:pt-64 lg:pt-72 pb-16">
         <div className="container-custom">
           {/* Main Hero Headline */}
-          <div className="max-w-4xl">
+          <div className="max-w-4xl mt-6 md:mt-10">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.75rem] font-extrabold tracking-tight text-black leading-[1.05]">
               Build brands<br />
               that get found<br />
