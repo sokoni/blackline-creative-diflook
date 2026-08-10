@@ -49,7 +49,7 @@ export default function Navbar({ theme = 'dark' }) {
               key={link.name}
               to={link.path}
               className={({ isActive }) =>
-                `text-xs font-bold tracking-[0.15em] transition-colors relative py-1 ${
+                `text-xs font-bold tracking-[0.3em] transition-colors relative py-1 ${
                   isLight
                     ? isActive ? 'text-black font-extrabold' : 'text-neutral-600 hover:text-black'
                     : isActive ? 'text-white font-extrabold' : 'text-neutral-400 hover:text-white'
