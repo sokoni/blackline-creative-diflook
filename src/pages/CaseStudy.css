@@ -246,19 +246,19 @@ body {
 .project-showcase {
   position: relative;
 
-  min-height: 570px;
+  min-height: 500px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding-right: 70px;
+  padding-right: 0;
 }
 
 .project-mockup {
   display: block;
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
   height: auto;
   object-fit: contain;
 }

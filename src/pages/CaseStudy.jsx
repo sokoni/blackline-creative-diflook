@@ -118,34 +118,11 @@ export default function CaseStudy() {
 
         {/* RIGHT PROJECT SHOWCASE */}
         <div className="project-showcase">
-
-          <div className="laptop">
-
-            <div className="laptop-screen">
-
-              <img
-                src={project.desktopImage}
-                alt="Stronger Together desktop website"
-              />
-
-            </div>
-
-            <div className="laptop-base" />
-
-          </div>
-
-
-          <div className="phone">
-
-            <div className="phone-notch" />
-
-            <img
-              src={project.mobileImage}
-              alt="Stronger Together mobile website"
-            />
-
-          </div>
-
+          <img
+            src="/images/Project PNG.png"
+            alt="Stronger Together project mockup"
+            className="project-mockup"
+          />
         </div>
 
       </section>
