@@ -49,7 +49,7 @@ export default function Strategy() {
 
         <Link to="/" className="strategy-logo">
           <img
-            src="/images/blc-logo-white.png"
+            src="/images/Main Logo Full (white).png"
             alt="BlackLine Creative"
           />
         </Link>
