@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 import "./Work.css";
 
 const projects = [
@@ -40,35 +41,7 @@ export default function Work() {
     <main className="work-page">
 
       {/* HEADER */}
-      <header className="work-header">
-
-        <Link to="/" className="work-logo">
-          <img
-            src="/images/Main Logo Full (white).png"
-            alt="BlackLine Creative"
-          />
-        </Link>
-
-        <nav className="work-nav">
-          <div className="work-nav-dropdown">
-            <Link to="/strategy" className="work-nav-dropdown-trigger">
-              BLACKLINE THEORY
-            </Link>
-            <div className="dropdown-menu">
-              <Link to="/strategy">STRATEGY</Link>
-            </div>
-          </div>
-          <Link to="/services">SERVICES</Link>
-          <Link to="/work">WORK</Link>
-          <Link to="/insights">INSIGHTS</Link>
-          <Link to="/contact">CONTACT</Link>
-
-          <Link to="/contact" className="talk-button">
-            LET'S TALK
-          </Link>
-        </nav>
-
-      </header>
+      <Navbar variant="black" />
 
 
       {/* HERO */}

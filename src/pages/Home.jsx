@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 import "./Home.css";
 
 export default function Home() {
@@ -7,33 +7,7 @@ export default function Home() {
     <main className="blackline-home">
 
       {/* HEADER */}
-      <header className="header">
-        <Link to="/" className="header-logo">
-          <img
-            src="/images/Main Logo Full (B_Rainbow).png"
-            alt="BlackLine Creative"
-          />
-        </Link>
-
-        <nav className="nav">
-          <div className="nav-dropdown">
-            <Link to="/strategy" className="nav-dropdown-trigger">
-              BLACKLINE THEORY
-            </Link>
-            <div className="dropdown-menu">
-              <Link to="/strategy">STRATEGY</Link>
-            </div>
-          </div>
-          <Link to="/services">SERVICES</Link>
-          <Link to="/work">WORK</Link>
-          <Link to="/insights">INSIGHTS</Link>
-          <Link to="/contact">CONTACT</Link>
-
-          <Link to="/contact" className="talk-button">
-            LET'S TALK
-          </Link>
-        </nav>
-      </header>
+      <Navbar variant="white" />
 
 
       {/* HERO */}

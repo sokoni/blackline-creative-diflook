@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 import "./CaseStudy.css";
 
 const project = {
@@ -38,35 +39,7 @@ export default function CaseStudy() {
     <main className="case-study-page">
 
       {/* HEADER */}
-      <header className="case-header">
-
-        <Link to="/" className="case-logo">
-          <img
-            src="/images/Main Logo Full (white).png"
-            alt="BlackLine Creative"
-          />
-        </Link>
-
-        <nav className="case-nav">
-          <div className="case-nav-dropdown">
-            <Link to="/strategy" className="case-nav-dropdown-trigger">
-              BLACKLINE THEORY
-            </Link>
-            <div className="dropdown-menu">
-              <Link to="/strategy">STRATEGY</Link>
-            </div>
-          </div>
-          <Link to="/services">SERVICES</Link>
-          <Link to="/work">WORK</Link>
-          <Link to="/insights">INSIGHTS</Link>
-          <Link to="/contact">CONTACT</Link>
-
-          <Link to="/contact" className="case-talk">
-            LET'S TALK
-          </Link>
-        </nav>
-
-      </header>
+      <Navbar variant="black" />
 
 
       {/* CASE STUDY */}

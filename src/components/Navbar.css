@@ -1,0 +1,281 @@
+/* BlackLine Creative Unified Navbar System */
+
+.blc-navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.blc-navbar-container {
+  max-width: 1500px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 35px 5%;
+}
+
+.blc-logo img {
+  width: 160px;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.blc-nav {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.blc-nav-link {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, opacity 0.2s ease;
+}
+
+.blc-nav-link:hover {
+  opacity: 0.6;
+}
+
+/* =========================
+   BLACK NAVBAR VARIANT
+========================= */
+
+.blc-navbar.variant-black {
+  background-color: #000000;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.blc-navbar.variant-black .blc-nav-link {
+  color: #ffffff;
+}
+
+.blc-navbar.variant-black .blc-talk-button {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 15px 24px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.blc-navbar.variant-black .blc-talk-button:hover {
+  background: #ffffff;
+  color: #000000;
+  opacity: 1;
+}
+
+/* =========================
+   WHITE NAVBAR VARIANT
+========================= */
+
+.blc-navbar.variant-white {
+  background-color: #ffffff;
+  color: #080808;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.blc-navbar.variant-white .blc-nav-link {
+  color: #080808;
+}
+
+.blc-navbar.variant-white .blc-talk-button {
+  background: #050505;
+  color: #ffffff;
+  border: 1px solid #050505;
+  padding: 15px 24px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.blc-navbar.variant-white .blc-talk-button:hover {
+  background: #ffffff;
+  color: #050505;
+  opacity: 1;
+}
+
+/* =========================
+   DROPDOWN MENU
+========================= */
+
+.blc-nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.blc-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.blc-dropdown-trigger::after {
+  content: "▾";
+  font-size: 10px;
+  margin-left: 2px;
+}
+
+.blc-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  padding: 8px 0;
+  z-index: 120;
+  margin-top: 12px;
+  border-radius: 6px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.blc-navbar.variant-black .blc-dropdown-menu {
+  background: #111115;
+  border: 1px solid #2a2a30;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+}
+
+.blc-navbar.variant-white .blc-dropdown-menu {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.blc-nav-dropdown:hover .blc-dropdown-menu,
+.blc-nav-dropdown:focus-within .blc-dropdown-menu {
+  display: block;
+}
+
+.blc-dropdown-menu a {
+  display: block;
+  padding: 10px 18px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.blc-navbar.variant-black .blc-dropdown-menu a {
+  color: #ffffff !important;
+}
+
+.blc-navbar.variant-black .blc-dropdown-menu a:hover {
+  background: #1c1c24;
+  color: #f12bbd !important;
+}
+
+.blc-navbar.variant-white .blc-dropdown-menu a {
+  color: #080808 !important;
+}
+
+.blc-navbar.variant-white .blc-dropdown-menu a:hover {
+  background: #f8f8f8;
+  color: #f12bbd !important;
+}
+
+/* =========================
+   HAMBURGER TOGGLE & MOBILE
+========================= */
+
+.blc-hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.blc-hamburger svg {
+  width: 26px;
+  height: 26px;
+}
+
+.blc-navbar.variant-black .blc-hamburger svg {
+  stroke: #ffffff;
+}
+
+.blc-navbar.variant-white .blc-hamburger svg {
+  stroke: #080808;
+}
+
+.blc-mobile-drawer {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  padding: 40px 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
+
+.blc-navbar.variant-black .blc-mobile-drawer {
+  background: #000000;
+  color: #ffffff;
+}
+
+.blc-navbar.variant-white .blc-mobile-drawer {
+  background: #ffffff;
+  color: #080808;
+}
+
+.blc-mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.blc-mobile-link {
+  font-size: 24px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.blc-navbar.variant-black .blc-mobile-link {
+  color: #ffffff;
+}
+
+.blc-navbar.variant-white .blc-mobile-link {
+  color: #080808;
+}
+
+/* =========================
+   TABLET & MOBILE BREAKPOINTS
+========================= */
+
+@media (max-width: 1000px) {
+  .blc-nav {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 780px) {
+  .blc-navbar-container {
+    padding: 25px 6%;
+  }
+
+  .blc-nav {
+    display: none;
+  }
+
+  .blc-hamburger {
+    display: block;
+  }
+}
