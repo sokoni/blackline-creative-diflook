@@ -236,6 +236,7 @@ body {
 
   font-size: 17px;
   font-weight: 800;
+  color: #000000;
 }
 
 .pillar-title {
@@ -243,13 +244,14 @@ body {
 
   font-size: 27px;
   line-height: 1.35;
+  color: #000000;
 }
 
 .pillar-description {
   margin: 27px 0 0;
 
   font-size: 16px;
-  color: #333333;
+  color: #000000;
 }
 
 .center-logo {
