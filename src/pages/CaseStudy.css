@@ -1,0 +1,568 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #050505;
+}
+
+.case-study-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 70% 50%,
+      #0d0d0d 0%,
+      #050505 45%,
+      #020202 100%
+    );
+
+  color: #fff;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.case-header {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: auto;
+
+  padding: 35px 4%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.case-logo img {
+  display: block;
+
+  width: 160px;
+  height: auto;
+}
+
+.case-nav {
+  display: flex;
+  align-items: center;
+
+  gap: 42px;
+}
+
+.case-nav a {
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: opacity 0.2s ease;
+}
+
+.case-nav a:hover {
+  opacity: 0.55;
+}
+
+.case-nav .case-talk {
+  padding: 16px 25px;
+
+  border: 1px solid #fff;
+
+  transition: 0.25s ease;
+}
+
+.case-nav .case-talk:hover {
+  background: #fff;
+  color: #000;
+
+  opacity: 1;
+}
+
+/* NAV DROPDOWN */
+.case-nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.case-nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.case-nav-dropdown-trigger::after {
+  content: "▾";
+  font-size: 10px;
+  margin-left: 2px;
+}
+
+.case-nav-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 170px;
+  background: #111115;
+  border: 1px solid #2a2a30;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  padding: 8px 0;
+  z-index: 100;
+  margin-top: 12px;
+  border-radius: 4px;
+}
+
+.case-nav-dropdown:hover .dropdown-menu,
+.case-nav-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.case-nav-dropdown .dropdown-menu a {
+  display: block;
+  padding: 10px 18px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.case-nav-dropdown .dropdown-menu a:hover {
+  background: #1c1c24;
+  color: #f229c3 !important;
+  opacity: 1 !important;
+}
+
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.case-content {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: auto;
+
+  padding: 55px 4% 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(280px, 32%)
+    1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+
+/* =========================
+   PROJECT INFORMATION
+========================= */
+
+.case-information {
+  position: relative;
+
+  z-index: 5;
+}
+
+.case-eyebrow {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #f12bbd;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 0.3px;
+}
+
+.case-information h1 {
+  margin:
+    0
+    0
+    48px;
+
+  font-size: clamp(38px, 3.4vw, 58px);
+
+  line-height: 1.03;
+
+  letter-spacing: -2px;
+
+  font-weight: 800;
+}
+
+.case-detail {
+  margin-bottom: 28px;
+}
+
+.case-detail h3 {
+  margin:
+    0
+    0
+    7px;
+
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.3px;
+}
+
+.case-detail p {
+  max-width: 310px;
+
+  margin: 0;
+
+  color: #bcbcbc;
+
+  font-size: 14px;
+
+  line-height: 1.45;
+}
+
+.results p {
+  line-height: 1.5;
+}
+
+
+/* =========================
+   PROJECT SHOWCASE
+========================= */
+
+.project-showcase {
+  position: relative;
+
+  min-height: 570px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-right: 70px;
+}
+
+.project-mockup {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* =========================
+   LAPTOP
+========================= */
+
+.laptop {
+  position: relative;
+
+  width: min(720px, 90%);
+
+  z-index: 1;
+}
+
+.laptop-screen {
+  position: relative;
+
+  overflow: hidden;
+
+  aspect-ratio: 16 / 10;
+
+  background: #090909;
+
+  border:
+    3px
+    solid
+    #656565;
+
+  border-radius:
+    22px
+    22px
+    10px
+    10px;
+
+  padding: 12px;
+}
+
+.laptop-screen img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+}
+
+.laptop-base {
+  position: absolute;
+
+  left: -5%;
+  bottom: -18px;
+
+  width: 110%;
+  height: 22px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f1f1f1,
+      #8d8d8d
+    );
+
+  border-radius:
+    2px
+    2px
+    15px
+    15px;
+}
+
+.laptop-base::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  transform: translateX(-50%);
+
+  width: 15%;
+  height: 5px;
+
+  background: #777;
+
+  border-radius:
+    0
+    0
+    5px
+    5px;
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+.phone {
+  position: absolute;
+
+  right: 2%;
+  top: 50%;
+
+  transform: translateY(-38%);
+
+  width: 165px;
+
+  aspect-ratio: 9 / 19;
+
+  padding: 7px;
+
+  overflow: hidden;
+
+  background: #080808;
+
+  border: 4px solid #555;
+
+  border-radius: 28px;
+
+  z-index: 4;
+
+  box-shadow:
+    0
+    20px
+    45px
+    rgba(0, 0, 0, 0.6);
+}
+
+.phone img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 19px;
+}
+
+.phone-notch {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 50%;
+  top: 8px;
+
+  transform: translateX(-50%);
+
+  width: 45%;
+  height: 17px;
+
+  background: #050505;
+
+  border-radius:
+    0
+    0
+    10px
+    10px;
+}
+
+
+/* =========================
+   BACK LINK
+========================= */
+
+.case-back {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: auto;
+
+  padding:
+    10px
+    4%
+    40px;
+
+  text-align: center;
+}
+
+.case-back a {
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: opacity 0.2s ease;
+}
+
+.case-back a:hover {
+  opacity: 0.55;
+}
+
+.case-back span {
+  margin-right: 12px;
+
+  font-size: 18px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+
+  .case-nav {
+    gap: 20px;
+  }
+
+  .case-content {
+    grid-template-columns:
+      34%
+      66%;
+
+    gap: 20px;
+  }
+
+  .project-showcase {
+    padding-right: 50px;
+  }
+
+  .phone {
+    width: 130px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 780px) {
+
+  .case-header {
+    padding:
+      25px
+      6%;
+  }
+
+  .case-logo img {
+    width: 140px;
+  }
+
+  .case-nav {
+    display: none;
+  }
+
+
+  .case-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding:
+      50px
+      6%;
+  }
+
+
+  .case-information h1 {
+    margin-bottom: 40px;
+
+    font-size: 43px;
+  }
+
+
+  .case-detail p {
+    max-width: 100%;
+  }
+
+
+  .project-showcase {
+    min-height: 400px;
+
+    margin-top: 30px;
+
+    padding-right: 30px;
+  }
+
+
+  .laptop {
+    width: 90%;
+  }
+
+
+  .phone {
+    right: 0;
+
+    width: 105px;
+  }
+
+
+  .case-back {
+    padding-bottom: 50px;
+  }
+
+}
