@@ -7,7 +7,7 @@ export default function Home() {
     <main className="blackline-home">
 
       {/* HEADER */}
-      <Navbar variant="black" />
+      <Navbar variant="white" />
 
 
       {/* HERO */}
