@@ -61,7 +61,7 @@ export default function Navbar({ variant }) {
             </div>
           </div>
 
-          <Link to="/insights" className="blc-nav-link">INSIGHTS</Link>
+          <Link to="/about" className="blc-nav-link">ABOUT US</Link>
           <Link to="/contact" className="blc-nav-link">CONTACT</Link>
 
           {/* LET'S TALK Button */}
@@ -101,7 +101,7 @@ export default function Navbar({ variant }) {
             <Link to="/services" className="blc-mobile-link">SERVICES</Link>
             <Link to="/projects" className="blc-mobile-link">PROJECTS</Link>
             <Link to="/case-study" className="blc-mobile-link" style={{ paddingLeft: '20px', fontSize: '18px', opacity: 0.8 }}>└ CASE STUDY</Link>
-            <Link to="/insights" className="blc-mobile-link">INSIGHTS</Link>
+            <Link to="/about" className="blc-mobile-link">ABOUT US</Link>
             <Link to="/contact" className="blc-mobile-link">CONTACT</Link>
           </div>
 
