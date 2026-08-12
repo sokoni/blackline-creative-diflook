@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "./Work.css";
 
@@ -36,6 +36,7 @@ const projects = [
 
 export default function Work() {
   const [activeProject, setActiveProject] = useState(null);
+  const navigate = useNavigate();
 
   return (
     <main className="work-page">
@@ -124,13 +125,7 @@ export default function Work() {
                     ? "active"
                     : ""
                 }`}
-                onClick={() =>
-                  setActiveProject(
-                    activeProject === project.id
-                      ? null
-                      : project.id
-                  )
-                }
+                onClick={() => navigate(project.url)}
                 aria-label={`View ${project.title}`}
               />
 
