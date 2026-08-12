@@ -39,7 +39,7 @@ export default function Navbar({ variant }) {
         <nav className="blc-nav">
           {/* BLACKLINE THEORY Dropdown */}
           <div className="blc-nav-dropdown">
-            <Link to="/strategy" className="blc-nav-link blc-dropdown-trigger">
+            <Link to="/" className="blc-nav-link blc-dropdown-trigger">
               BLACKLINE THEORY
             </Link>
             <div className="blc-dropdown-menu">
@@ -95,7 +95,7 @@ export default function Navbar({ variant }) {
       {mobileOpen && (
         <div className="blc-mobile-drawer">
           <div className="blc-mobile-links">
-            <Link to="/strategy" className="blc-mobile-link">BLACKLINE THEORY</Link>
+            <Link to="/" className="blc-mobile-link">BLACKLINE THEORY</Link>
             <Link to="/strategy" className="blc-mobile-link" style={{ paddingLeft: '20px', fontSize: '18px', opacity: 0.8 }}>└ STRATEGY</Link>
             <Link to="/creativity" className="blc-mobile-link" style={{ paddingLeft: '20px', fontSize: '18px', opacity: 0.8 }}>└ CREATIVITY</Link>
             <Link to="/services" className="blc-mobile-link">SERVICES</Link>
