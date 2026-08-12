@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import "./CaseStudy.css";
 
@@ -59,8 +59,46 @@ const projectsData = {
   },
 };
 
+const projectsList = [
+  {
+    id: 1,
+    key: "stronger-together",
+    title: "Stronger Together",
+    category: "Strategy • Web Design • SEO",
+    image: "/images/stronger-together.jpg",
+    url: "/work/stronger-together",
+  },
+  {
+    id: 2,
+    key: "project-2",
+    title: "Project 2",
+    category: "Strategy • Branding • Web Design",
+    image: "/images/project-two.png",
+    url: "/work/project-2",
+  },
+  {
+    id: 3,
+    key: "project-3",
+    title: "Project 3",
+    category: "Brand Strategy • Development",
+    image: "/images/project-three.png",
+    url: "/work/project-3",
+  },
+  {
+    id: 4,
+    key: "project-four",
+    title: "Project 4",
+    category: "Branding • Digital Experience",
+    image: "/images/project-four.jpg",
+    url: "/work/project-four",
+  },
+];
+
 export default function CaseStudy() {
   const { id } = useParams();
+  const navigate = useNavigate();
+  const [hoveredDot, setHoveredDot] = useState(null);
+
   const projectKey = id && projectsData[id] ? id : "stronger-together";
   const project = projectsData[projectKey];
 
@@ -154,6 +192,46 @@ export default function CaseStudy() {
           />
         </div>
 
+      </section>
+
+
+      {/* INTERACTIVE PROJECT TIMELINE */}
+      <section className="project-timeline case-timeline" id="projects">
+        <div className="gradient-line" />
+
+        <div className="project-dots">
+          {projectsList.map((p) => {
+            const isCurrent = p.key === projectKey;
+            const isHovered = hoveredDot === p.id;
+            const activeClass = isCurrent || isHovered ? "active" : "";
+
+            return (
+              <div
+                className="project-marker"
+                key={p.id}
+                onMouseEnter={() => setHoveredDot(p.id)}
+                onMouseLeave={() => setHoveredDot(null)}
+              >
+                <button
+                  className={`project-dot ${activeClass}`}
+                  onClick={() => navigate(p.url)}
+                  aria-label={`View ${p.title}`}
+                />
+
+                {/* HOVER / PREVIEW CARD */}
+                <div className={`project-preview ${isHovered ? "visible" : ""}`}>
+                  <img src={p.image} alt={p.title} />
+                  <div className="preview-content">
+                    <span>PROJECT 0{p.id}</span>
+                    <h3>{p.title}</h3>
+                    <p>{p.category}</p>
+                    <Link to={p.url}>VIEW CASE STUDY →</Link>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </section>
 
 
