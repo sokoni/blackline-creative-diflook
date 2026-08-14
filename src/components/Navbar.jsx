@@ -27,6 +27,8 @@ export default function Navbar({ variant }) {
     ? '/images/Main Logo Full (B_Rainbow).png'
     : '/images/Main Logo Full (white).png';
 
+  const isActive = (path) => location.pathname === path;
+
   return (
     <header className={`blc-navbar variant-${activeVariant}`}>
       <div className="blc-navbar-container">
@@ -39,7 +41,7 @@ export default function Navbar({ variant }) {
         <nav className="blc-nav">
           {/* BLACKLINE THEORY Dropdown */}
           <div className="blc-nav-dropdown">
-            <Link to="/" className="blc-nav-link blc-dropdown-trigger">
+            <Link to="/" className={`blc-nav-link blc-dropdown-trigger ${isActive('/') || isActive('/strategy') || isActive('/creativity') ? 'active' : ''}`}>
               BLACKLINE THEORY
             </Link>
             <div className="blc-dropdown-menu">
@@ -48,11 +50,11 @@ export default function Navbar({ variant }) {
             </div>
           </div>
 
-          <Link to="/services" className="blc-nav-link">SERVICES</Link>
+          <Link to="/services" className={`blc-nav-link ${isActive('/services') ? 'active' : ''}`}>SERVICES</Link>
 
           {/* PROJECTS Dropdown */}
           <div className="blc-nav-dropdown">
-            <Link to="/projects" className="blc-nav-link blc-dropdown-trigger">
+            <Link to="/projects" className={`blc-nav-link blc-dropdown-trigger ${isActive('/projects') || isActive('/work') ? 'active' : ''}`}>
               PROJECTS
             </Link>
             <div className="blc-dropdown-menu">
@@ -61,8 +63,8 @@ export default function Navbar({ variant }) {
             </div>
           </div>
 
-          <Link to="/about" className="blc-nav-link">ABOUT US</Link>
-          <Link to="/contact" className="blc-nav-link">CONTACT</Link>
+          <Link to="/about" className={`blc-nav-link ${isActive('/about') ? 'active' : ''}`}>ABOUT US</Link>
+          <Link to="/contact" className={`blc-nav-link ${isActive('/contact') ? 'active' : ''}`}>CONTACT</Link>
 
           {/* LET'S TALK Button */}
           <Link to="/contact" className="blc-talk-button">
