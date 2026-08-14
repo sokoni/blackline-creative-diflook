@@ -20,7 +20,7 @@ export default function Creativity() {
           </span>
 
           <h1>
-            Design brands
+            Designing brands
             <br />
             worth
             <br />

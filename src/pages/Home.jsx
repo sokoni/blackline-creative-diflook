@@ -56,7 +56,7 @@ export default function Home() {
             <h3>CREATIVITY</h3>
 
             <p className="pillar-title">
-              Design brands
+              Designing brands
               <br />
               worth remembering.
             </p>
