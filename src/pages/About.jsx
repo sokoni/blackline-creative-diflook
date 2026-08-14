@@ -5,204 +5,182 @@ import './About.css';
 
 export default function About() {
   return (
-    <div className="about-page">
-      {/* 1. NAVIGATION */}
+    <main className="about-page">
+      {/* NAVIGATION */}
       <Navbar variant="black" />
 
-      <main>
-        {/* 2. HERO SECTION */}
-        <section className="about-hero">
-          <div className="hero-copy">
-            <p className="eyebrow">ABOUT US</p>
+      {/* HERO SECTION */}
+      <section className="about-hero">
+        {/* LEFT CONTENT */}
+        <div className="about-copy">
+          <span className="eyebrow">ABOUT US</span>
 
-            <h1>
-              Built by visionaries.<br />
-              Driven by purpose<span className="pink">.</span>
-            </h1>
+          <h1>
+            Built by visionaries.
+            <br />
+            Driven by purpose<span>.</span>
+          </h1>
 
-            <div className="gradient-line">
-              <span />
+          <div className="about-gradient-line">
+            <span />
+          </div>
+
+          <p className="hero-intro">
+            BlackLine Creative was founded by two partners who believe brands can
+            do more than look good—they can lead, inspire, and leave a lasting impact.
+          </p>
+
+          <p className="hero-subtext">
+            We combine strategy, creativity, and technology to help businesses stand
+            out and grow with intention.
+          </p>
+        </div>
+
+        {/* RIGHT VISUAL ARTWORK */}
+        <div className="about-art">
+          <div className="topography-bg" aria-hidden="true" />
+          <div className="brand-b-mark">
+            <img
+              src="/images/Main Logo B (W_Rainbow).png"
+              alt="BlackLine Creative Brand Mark"
+              className="b-logo-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CO-FOUNDERS SECTION */}
+      <section className="founders-section">
+        <div className="founders-heading">
+          <span className="eyebrow-accent">THE CO-FOUNDERS</span>
+          <h2>
+            The minds behind BlackLine Creative<span>.</span>
+          </h2>
+        </div>
+
+        <div className="founders-grid">
+          {/* SOKONI BABB */}
+          <article className="founder-card">
+            <div className="founder-image-wrapper">
+              <img
+                src="/images/sokoni-babb.jpg"
+                alt="Sokoni Babb, Co-Founder and Strategy Lead of BlackLine Creative"
+                className="founder-photo"
+              />
             </div>
 
-            <div className="hero-description">
-              <p>
-                BlackLine Creative was founded by two partners who believe
-                brands can do more than look good—they can lead, inspire,
-                and leave a lasting impact.
+            <div className="founder-info">
+              <h3>SOKONI BABB</h3>
+              <p className="founder-title">CO-FOUNDER &amp; STRATEGY LEAD</p>
+
+              <div className="card-gradient-bar" />
+
+              <p className="founder-bio">
+                A strategist at heart, Sokoni turns big ideas into clear plans that
+                drive real results. With a background in technology, psychology, and
+                business, he specializes in brand strategy, positioning, and growth
+                systems that create long-term impact.
               </p>
 
-              <p>
-                We combine strategy, creativity, and technology to help
-                businesses stand out and grow with intention.
+              <div className="focus-block">
+                <div className="focus-icon-node" aria-hidden="true">
+                  ◎
+                </div>
+                <div className="focus-details">
+                  <h4>FOCUS AREAS</h4>
+                  <p>
+                    Brand Strategy, Market Research, Growth Planning, Business Development
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          {/* AIDEN WILLIAMS */}
+          <article className="founder-card">
+            <div className="founder-image-wrapper">
+              <img
+                src="/images/aiden-williams.jpg"
+                alt="Aiden Williams, Co-Founder and Creative Lead of BlackLine Creative"
+                className="founder-photo"
+              />
+            </div>
+
+            <div className="founder-info">
+              <h3>AIDEN WILLIAMS</h3>
+              <p className="founder-title">CO-FOUNDER &amp; CREATIVE LEAD</p>
+
+              <div className="card-gradient-bar" />
+
+              <p className="founder-bio">
+                Aiden is the creative force that brings brands to life. He leads
+                with design thinking, storytelling, and a sharp eye for detail—crafting
+                visual identities and digital experiences that connect and convert.
               </p>
+
+              <div className="focus-block">
+                <div className="focus-icon-node" aria-hidden="true">
+                  ◉
+                </div>
+                <div className="focus-details">
+                  <h4>FOCUS AREAS</h4>
+                  <p>
+                    Brand Identity, Web Design, UI/UX, Creative Direction, Content Strategy
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* SHARED MISSION / VISION SECTION */}
+      <section className="about-mission-section">
+        <div className="mission-panel">
+          {/* RADAR VISUAL */}
+          <div className="mission-radar-wrapper" aria-hidden="true">
+            <div className="about-radar">
+              <div className="radar-circle outer-ring" />
+              <div className="radar-circle middle-ring" />
+              <div className="radar-circle inner-ring" />
+              <div className="radar-center-glow">
+                <div className="radar-core-dot" />
+              </div>
+              <div className="radar-beam-line" />
             </div>
           </div>
 
-          <div className="hero-art" aria-hidden="true">
-            <div className="topography" />
-            <div className="big-b">
-              B
-            </div>
-          </div>
-        </section>
-
-        {/* 3. CO-FOUNDERS SECTION */}
-        <section className="founders-section">
-          <div className="section-heading">
-            <p className="eyebrow">THE CO-FOUNDERS</p>
-
+          {/* MISSION COPY */}
+          <div className="mission-copy">
+            <span className="eyebrow">OUR VISION</span>
             <h2>
-              The minds behind BlackLine Creative<span className="pink">.</span>
+              Different backgrounds.
+              <br />
+              One mission<span>.</span>
             </h2>
-          </div>
 
-          <div className="founders-grid">
-            {/* SOKONI BABB */}
-            <article className="founder-card">
-              <div className="founder-image">
-                <img
-                  src="/images/sokoni-babb.jpg"
-                  alt="Sokoni Babb, Co-Founder and Strategy Lead of BlackLine Creative"
-                />
-              </div>
+            <p>
+              We come from different paths, but we share the same belief: when strategy
+              and creativity work together, brands don't just grow—they leave a mark.
+            </p>
 
-              <div className="founder-content">
-                <h3>SOKONI BABB</h3>
+            <p>
+              That's why we built BlackLine Creative—to help ambitious brands get found,
+              remembered, and chosen.
+            </p>
 
-                <p className="founder-role">
-                  CO-FOUNDER &amp; STRATEGY LEAD
-                </p>
+            <div className="mission-cta-row">
+              <strong className="cta-statement">
+                Let's build something worth remembering<span>.</span>
+              </strong>
 
-                <div className="small-gradient" />
-
-                <p className="founder-bio">
-                  A strategist at heart, Sokoni turns big ideas into clear
-                  plans that drive real results. With a background in
-                  technology, psychology, and business, he specializes in
-                  brand strategy, positioning, and growth systems that
-                  create long-term impact.
-                </p>
-
-                <div className="focus">
-                  <div className="focus-icon" aria-hidden="true">
-                    ◎
-                  </div>
-
-                  <div>
-                    <h4>FOCUS AREAS</h4>
-                    <p>
-                      Brand Strategy, Market Research,<br />
-                      Growth Planning, Business Development
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            {/* AIDEN WILLIAMS */}
-            <article className="founder-card">
-              <div className="founder-image">
-                <img
-                  src="/images/aiden-williams.jpg"
-                  alt="Aiden Williams, Co-Founder and Creative Lead of BlackLine Creative"
-                />
-              </div>
-
-              <div className="founder-content">
-                <h3>AIDEN WILLIAMS</h3>
-
-                <p className="founder-role">
-                  CO-FOUNDER &amp; CREATIVE LEAD
-                </p>
-
-                <div className="small-gradient" />
-
-                <p className="founder-bio">
-                  Aiden is the creative force that brings brands to life.
-                  He leads with design thinking, storytelling, and a sharp
-                  eye for detail—crafting visual identities and digital
-                  experiences that connect and convert.
-                </p>
-
-                <div className="focus">
-                  <div className="focus-icon" aria-hidden="true">
-                    ◉
-                  </div>
-
-                  <div>
-                    <h4>FOCUS AREAS</h4>
-                    <p>
-                      Brand Identity, Web Design, UI/UX,<br />
-                      Creative Direction, Content Strategy
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        {/* 5. SHARED MISSION SECTION */}
-        <section className="mission-section">
-          <div className="mission-box">
-            <div className="radar" aria-hidden="true">
-              <div className="radar-ring ring-one" />
-              <div className="radar-ring ring-two" />
-              <div className="radar-ring ring-three" />
-              <div className="radar-line" />
-              <div className="radar-dot" />
-            </div>
-
-            <div className="mission-content">
-              <p className="eyebrow">OUR VISION</p>
-
-              <h2>
-                Different backgrounds.<br />
-                One mission<span className="pink">.</span>
-              </h2>
-
-              <p>
-                We come from different paths, but we share the same belief:
-                when strategy and creativity work together, brands don't
-                just grow—they leave a mark.
-              </p>
-
-              <p>
-                That's why we built BlackLine Creative—to help ambitious
-                brands get found, remembered, and chosen.
-              </p>
-
-              <div className="mission-cta">
-                <strong>
-                  Let's build something worth remembering<span className="pink">.</span>
-                </strong>
-
-                <Link to="/contact" className="outline-button">
-                  LET'S TALK &rarr;
-                </Link>
-              </div>
+              <Link to="/contact" className="about-talk-button">
+                LET'S TALK &rarr;
+              </Link>
             </div>
           </div>
-        </section>
-      </main>
-
-      {/* 6. FOOTER */}
-      <footer className="footer">
-        <div className="footer-logo">
-          <span>BLACKLINE</span>
-          <small>CREATIVE</small>
         </div>
-
-        <p>
-          &copy; {new Date().getFullYear()} BlackLine Creative LLC. All rights reserved.
-        </p>
-
-        <div className="footer-links">
-          <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="LinkedIn">IN</a>
-          <Link to="/contact" aria-label="Contact BlackLine Creative">EMAIL</Link>
-        </div>
-      </footer>
-    </div>
+      </section>
+    </main>
   );
 }
