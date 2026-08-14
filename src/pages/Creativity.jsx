@@ -38,13 +38,11 @@ export default function Creativity() {
 
         {/* ABSTRACT COLOR VISUAL */}
         <div className="creative-art">
-
-          <div className="cloud cloud-orange" />
-          <div className="cloud cloud-pink" />
-          <div className="cloud cloud-magenta" />
-          <div className="cloud cloud-purple" />
-          <div className="cloud cloud-blue" />
-
+          <img
+            src="/images/AdobeStock_602793829.png"
+            alt="BlackLine Creative Abstract Art"
+            className="creative-artwork-img"
+          />
         </div>
 
       </section>
