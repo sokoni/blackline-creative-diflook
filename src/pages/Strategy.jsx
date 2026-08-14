@@ -59,7 +59,7 @@ export default function Strategy() {
           </span>
 
           <h1>
-            Build brands
+            Building brands
             <br />
             that get found<span>.</span>
           </h1>
