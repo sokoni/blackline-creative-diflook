@@ -14,7 +14,7 @@ export default function Home() {
       <section className="hero">
 
         <h1>
-          Build brands
+          Building brands
           <br />
           that get found
           <br />
@@ -33,7 +33,7 @@ export default function Home() {
             <h3>STRATEGY</h3>
 
             <p className="pillar-title">
-              Build brands
+              Building brands
               <br />
               that get found.
             </p>
