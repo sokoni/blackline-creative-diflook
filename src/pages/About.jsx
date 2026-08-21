@@ -59,26 +59,26 @@ export default function About() {
         </div>
 
         <div className="founders-grid">
-          {/* SOKONI BABB */}
+          {/* ASHLEY JOHNSON */}
           <article className="founder-card">
             <div className="founder-image-wrapper">
               <img
-                src="/images/sokoni-babb.jpg"
-                alt="Sokoni Babb, Co-Founder and Strategy Lead of BlackLine Creative"
+                src="/images/ashley-johnson.jpg"
+                alt="Ashley Johnson, Co-Founder and Strategy Lead of BlackLine Creative"
                 className="founder-photo"
               />
             </div>
 
             <div className="founder-info">
-              <h3>SOKONI BABB</h3>
+              <h3>ASHLEY JOHNSON</h3>
               <p className="founder-title">CO-FOUNDER &amp; STRATEGY LEAD</p>
 
               <div className="card-gradient-bar" />
 
               <p className="founder-bio">
-                A strategist at heart, Sokoni turns big ideas into clear plans that
+                A strategist at heart, Ashley turns big ideas into clear plans that
                 drive real results. With a background in technology, psychology, and
-                business, he specializes in brand strategy, positioning, and growth
+                business, she specializes in brand strategy, positioning, and growth
                 systems that create long-term impact.
               </p>
 
@@ -96,24 +96,24 @@ export default function About() {
             </div>
           </article>
 
-          {/* AIDEN WILLIAMS */}
+          {/* SOKONI BABB */}
           <article className="founder-card">
             <div className="founder-image-wrapper">
               <img
-                src="/images/aiden-williams.jpg"
-                alt="Aiden Williams, Co-Founder and Creative Lead of BlackLine Creative"
+                src="/images/sokoni-babb.jpg"
+                alt="Sokoni Babb, Co-Founder and Creative Lead of BlackLine Creative"
                 className="founder-photo"
               />
             </div>
 
             <div className="founder-info">
-              <h3>AIDEN WILLIAMS</h3>
+              <h3>SOKONI BABB</h3>
               <p className="founder-title">CO-FOUNDER &amp; CREATIVE LEAD</p>
 
               <div className="card-gradient-bar" />
 
               <p className="founder-bio">
-                Aiden is the creative force that brings brands to life. He leads
+                Sokoni is the creative force that brings brands to life. He leads
                 with design thinking, storytelling, and a sharp eye for detail—crafting
                 visual identities and digital experiences that connect and convert.
               </p>
